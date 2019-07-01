@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="62.0" y="77.0">Spot</node>
+    <node x="0.0" y="631.0">Grid</node>
+    <node x="0.0" y="556.0">Destroyers</node>
+    <node x="235.0" y="755.0">Computer</node>
+    <node x="386.0" y="755.0">Human</node>
+    <node x="305.0" y="631.0">Player</node>
+    <node x="308.0" y="556.0">Submarine</node>
+    <node x="30.5" y="246.0">SeaSpot</node>
+    <node x="164.0" y="556.0">Cruisers</node>
+    <node x="164.5" y="246.0">BoatSpot</node>
+    <node x="564.0" y="631.0">Game</node>
+    <node x="462.0" y="556.0">AircraftCarriers</node>
+    <node x="215.5" y="321.0">Boat</node>
+  </nodes>
+  <notes>
+    <note x="0.0" y="0.0">
+      <node>Spot</node>
+      <value>getSpots renvoie une list de list de spots</value>
+      <edge>
+        <point x="0.0" y="-59.5" />
+        <point x="0.0" y="13.5" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="AircraftCarriers" target="Boat">
+      <point x="0.0" y="-15.0" />
+      <point x="564.0" y="526.0" />
+      <point x="364.25" y="526.0" />
+      <point x="63.75" y="92.5" />
+    </edge>
+    <edge source="Human" target="Player">
+      <point x="0.0" y="-26.0" />
+      <point x="452.5" y="730.0" />
+      <point x="412.25" y="730.0" />
+      <point x="35.75" y="37.0" />
+    </edge>
+    <edge source="Submarine" target="Boat">
+      <point x="0.0" y="-15.0" />
+      <point x="375.0" y="536.0" />
+      <point x="321.75" y="536.0" />
+      <point x="21.25" y="92.5" />
+    </edge>
+    <edge source="Cruisers" target="Boat">
+      <point x="0.0" y="-15.0" />
+      <point x="226.0" y="536.0" />
+      <point x="279.25" y="536.0" />
+      <point x="-21.25" y="92.5" />
+    </edge>
+    <edge source="BoatSpot" target="Spot">
+      <point x="0.0" y="-15.0" />
+      <point x="226.5" y="221.0" />
+      <point x="204.5" y="221.0" />
+      <point x="47.5" y="59.5" />
+    </edge>
+    <edge source="Computer" target="Player">
+      <point x="0.0" y="-26.0" />
+      <point x="300.5" y="730.0" />
+      <point x="340.75" y="730.0" />
+      <point x="-35.75" y="37.0" />
+    </edge>
+    <edge source="SeaSpot" target="Spot">
+      <point x="0.0" y="-15.0" />
+      <point x="87.5" y="221.0" />
+      <point x="109.5" y="221.0" />
+      <point x="-47.5" y="59.5" />
+    </edge>
+    <edge source="Destroyers" target="Boat">
+      <point x="0.0" y="-15.0" />
+      <point x="72.0" y="526.0" />
+      <point x="236.75" y="526.0" />
+      <point x="-63.75" y="92.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.903470715835141" x="842.5" y="284.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
