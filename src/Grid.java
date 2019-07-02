@@ -1,20 +1,26 @@
+import java.util.Map;
+
 public class Grid {
     private Player player;
     private Spot[][] spots = new Spot[10][10];
-    private boolean hasPlayed;
     private Boat[] boats = new Boat[5];
-    private java.util.Map<String, Integer> mappingCoord;
+    private Map<String, Integer> mappingCoord;
 
-    public boolean isHasPlayed() {
-        return hasPlayed;
+    public boolean spotAlreadyPlayed(Spot spot) {
+        return spot.isTouched();
     }
 
-    public void setHasPlayed(boolean hasPlayed) {
-        this.hasPlayed = hasPlayed;
-    }
+    /**
+     *
+     * @return vrai tant qu'il reste au moins un bateau non coulé
+     */
+    public boolean checkBoats() {
 
-    private boolean checkBoats() {
-        return false;
+        boolean result = true;
+        for (Boat boat : boats) {
+            result &= !(boat.isSinked()) ;
+        }
+        return result;
     }
 
     /**

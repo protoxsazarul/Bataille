@@ -1,14 +1,14 @@
 import java.util.List;
 
 public abstract class Spot {
-    private static boolean isTouched;
+    private boolean isTouched;
 
-    public static boolean getIsTouched() {
+    public boolean isTouched() {
         return isTouched;
     }
 
-    public static void setIsTouched(boolean isTouched) {
-        Spot.isTouched = isTouched;
+    public void setTouched(boolean isTouched) {
+        this.isTouched = isTouched;
     }
 
     public List<Spot> getSpots() {

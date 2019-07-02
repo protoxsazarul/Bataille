@@ -13,7 +13,7 @@ public abstract class Boat {
         this.nbSpots = nbSpots;
     }
 
-    public boolean getIsSinked() {
+    public boolean isSinked() {
         return isSinked;
     }
 
