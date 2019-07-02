@@ -28,4 +28,8 @@ public abstract class Boat {
     public void setBoatSpots(List<Spot> boatSpots) {
         this.boatSpots = boatSpots;
     }
+    
+    public void setUpdateSinked(List<Boat> boat){
+    
+    }
 }
