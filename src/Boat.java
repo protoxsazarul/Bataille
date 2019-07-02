@@ -13,11 +13,11 @@ public abstract class Boat {
         this.nbSpots = nbSpots;
     }
 
-    public boolean getSinked() {
+    public boolean getIsSinked() {
         return isSinked;
     }
 
-    public void setSinked(boolean sinked) {
+    public void setIsSinked(boolean sinked) {
         isSinked = sinked;
     }
 }
