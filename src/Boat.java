@@ -20,4 +20,12 @@ public abstract class Boat {
     public void setIsSinked(boolean sinked) {
         isSinked = sinked;
     }
+
+    public List<Spot> getBoatSpots() {
+        return boatSpots;
+    }
+
+    public void setBoatSpots(List<Spot> boatSpots) {
+        this.boatSpots = boatSpots;
+    }
 }
