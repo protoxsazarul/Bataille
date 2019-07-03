@@ -30,6 +30,12 @@ public abstract class Boat {
     }
     
     public void setUpdateSinked(List<Boat> boat){
-    
+        for (int i=0; i<boat.length; i++)
+        {
+            type var = boat[i];
+            statements using var;
+        }
+            
+        }
     }
 }
