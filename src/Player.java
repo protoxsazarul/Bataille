@@ -3,5 +3,5 @@ public abstract class Player {
         return false;
     }
 
-    protected abstract void getChoice();
+    protected abstract String getChoice();
 }

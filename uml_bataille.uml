@@ -65,6 +65,12 @@
       <point x="774.75" y="491.0" />
       <point x="-36.25" y="36.0" />
     </edge>
+    <edge source="Grid" target="Player">
+      <point x="116.14285714285711" y="-90.5" />
+      <point x="816.6428571428571" y="543.0" />
+      <point x="902.3746498599439" y="543.0" />
+      <point x="-54.33333333333337" y="35.0" />
+    </edge>
     <edge source="SeaSpot" target="Spot">
       <point x="0.0" y="-14.0" />
       <point x="99.25" y="619.0" />
@@ -76,6 +82,12 @@
       <point x="69.5" y="269.0" />
       <point x="263.0" y="269.0" />
       <point x="-84.75" y="124.5" />
+    </edge>
+    <edge source="Boat" target="Spot">
+      <point x="-59.25" y="-112.5" />
+      <point x="398.1603641456584" y="238.0" />
+      <point x="523.5357142857144" y="238.0" />
+      <point x="-29.714285714285666" y="57.5" />
     </edge>
   </edges>
   <settings layout="Hierarchic Group" zoom="0.8177757520510482" x="737.908968127088" y="535.4402858696415" />
