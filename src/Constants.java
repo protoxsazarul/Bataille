@@ -1,5 +1,5 @@
 import java.util.Scanner;
 
 public class Constants {
-    public final Scanner SCAN = new Scanner(System.in);
+    public static final Scanner SCAN = new Scanner(System.in);
 }
