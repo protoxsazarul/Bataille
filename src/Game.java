@@ -3,9 +3,13 @@ public class Game {
     private Grid grid2;
     private Grid currentGrid;
 
-    public boolean checkVictory(Grid grid) {
-        return false;
+    public void isLooser(Grid grid) {
+        if (grid.checkBoats()) {
+            System.out.println(currentGrid + "a perdu");
+        }
     }
+
+    // faire la toString de currentGrid
 
     public void play() {
     }
