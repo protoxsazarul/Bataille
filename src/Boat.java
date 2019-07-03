@@ -29,13 +29,16 @@ public abstract class Boat {
         this.boatSpots = boatSpots;
     }
     
-    public void setUpdateSinked(List<Boat> boat){
-        for (int i=0; i<boat.length; i++)
+    public void setUpdateSinked(List<Boat> boats){
+        for (Boat boat : boats)
         {
-            type var = boat[i];
-            statements using var;
-        }
-            
+            boolean result = true;
+            for ( Spot spot : boat.getBoatSpots()){
+                if (!spot.isTouched()){
+                    result = false;
+                }
+            }
+            boat.setIsSinked( result );
         }
     }
 }
