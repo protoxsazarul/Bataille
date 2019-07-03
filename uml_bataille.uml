@@ -3,27 +3,27 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="77.0" y="429.0">Spot</node>
-    <node x="407.0" y="346.0">Grid</node>
-    <node x="0.0" y="275.0">Destroyers</node>
-    <node x="0.0" y="785.0">Computer</node>
-    <node x="179.0" y="785.0">Human</node>
-    <node x="87.5" y="665.0">Player</node>
-    <node x="592.0" y="665.0">Constants</node>
-    <node x="436.0" y="275.0">Submarine</node>
-    <node x="74.25" y="594.0">SeaSpot</node>
-    <node x="314.0" y="275.0">Cruisers</node>
-    <node x="189.25" y="594.0">BoatSpot</node>
-    <node x="383.0" y="665.0">Game</node>
-    <node x="136.0" y="275.0">AircraftCarriers</node>
-    <node x="171.5" y="0.0">Boat</node>
+    <node x="560.7857142857142" y="83.0">Spot</node>
+    <node x="463.25" y="595.0">Grid</node>
+    <node x="1208.25" y="661.5">Destroyers</node>
+    <node x="29.5" y="650.5">Computer</node>
+    <node x="284.25" y="661.5">Human</node>
+    <node x="322.0" y="356.5">Player</node>
+    <node x="0.0" y="345.5">Constants</node>
+    <node x="1063.25" y="661.5">Submarine</node>
+    <node x="645.5494227994228" y="378.5">SeaSpot</node>
+    <node x="754.25" y="661.5">Cruisers</node>
+    <node x="507.23196248196246" y="826.0">Game</node>
+    <node x="1073.75" y="378.5">BoatSpot</node>
+    <node x="885.25" y="661.5">AircraftCarriers</node>
+    <node x="795.75" y="268.0">Boat</node>
   </nodes>
   <notes>
-    <note x="0.0" y="346.0">
+    <note x="483.7857142857142" y="0.0">
       <node>Spot</node>
       <value>getSpots renvoie une list de list de spots</value>
       <edge>
-        <point x="0.0" y="-58.5" />
+        <point x="0.0" y="-57.5" />
         <point x="0.0" y="16.5" />
       </edge>
     </note>
@@ -31,56 +31,96 @@
   <edges>
     <edge source="BoatSpot" target="Spot">
       <point x="0.0" y="-13.0" />
-      <point x="240.25" y="569.0" />
-      <point x="233.0" y="569.0" />
-      <point x="52.0" y="57.5" />
+      <point x="1124.75" y="218.0" />
+      <point x="753.9285714285713" y="218.0" />
+      <point x="89.14285714285711" y="57.5" />
+    </edge>
+    <edge source="Human" target="Constants">
+      <point x="-39.74999999999994" y="-24.0" />
+      <point x="324.00000000000006" y="565.0" />
+      <point x="226.5" y="565.0" />
+      <point x="75.5" y="46.0" />
+    </edge>
+    <edge source="Grid" target="Boat">
+      <point x="77.42857142857144" y="-90.5" />
+      <point x="676.1785714285714" y="545.0" />
+      <point x="830.9318181818182" y="545.0" />
+      <point x="-93.81818181818176" y="123.5" />
+    </edge>
+    <edge source="Computer" target="Constants">
+      <point x="-46.0" y="-35.0" />
+      <point x="-75.5" y="46.0" />
+    </edge>
+    <edge source="Game" target="Grid">
+      <point x="41.0" y="-68.5" />
+      <point x="630.2319624819625" y="801.0" />
+      <point x="666.5" y="801.0" />
+      <point x="67.75" y="90.5" />
     </edge>
     <edge source="AircraftCarriers" target="Boat">
-      <point x="0.0" y="-13.0" />
-      <point x="215.0" y="250.0" />
-      <point x="260.375" y="250.0" />
-      <point x="-29.625" y="112.5" />
-    </edge>
-    <edge source="Human" target="Player">
-      <point x="0.0" y="-24.0" />
-      <point x="258.5" y="760.0" />
-      <point x="209.75" y="760.0" />
-      <point x="40.75" y="35.0" />
+      <point x="39.5" y="-24.0" />
+      <point x="1003.75" y="575.0" />
+      <point x="948.2045454545455" y="575.0" />
+      <point x="23.454545454545496" y="123.5" />
     </edge>
     <edge source="Submarine" target="Boat">
-      <point x="0.0" y="-13.0" />
-      <point x="490.5" y="250.0" />
-      <point x="378.875" y="250.0" />
-      <point x="88.875" y="112.5" />
+      <point x="31.25" y="-24.0" />
+      <point x="1157.0" y="555.0" />
+      <point x="995.1136363636363" y="555.0" />
+      <point x="70.36363636363626" y="123.5" />
+    </edge>
+    <edge source="Human" target="Player">
+      <point x="39.75000000000006" y="-24.0" />
+      <point x="0.0" y="35.0" />
     </edge>
     <edge source="Cruisers" target="Boat">
-      <point x="0.0" y="-13.0" />
-      <point x="365.0" y="250.0" />
-      <point x="319.625" y="250.0" />
-      <point x="29.625" y="112.5" />
+      <point x="27.75" y="-24.0" />
+      <point x="837.5" y="575.0" />
+      <point x="901.2954545454545" y="575.0" />
+      <point x="-23.454545454545496" y="123.5" />
+    </edge>
+    <edge source="Grid" target="Spot">
+      <point x="0.0" y="-90.5" />
+      <point x="598.75" y="575.0" />
+      <point x="571.0357142857142" y="575.0" />
+      <point x="571.0357142857142" y="248.0" />
+      <point x="635.0714285714284" y="248.0" />
+      <point x="-29.71428571428578" y="57.5" />
     </edge>
     <edge source="Computer" target="Player">
-      <point x="0.0" y="-24.0" />
-      <point x="79.5" y="760.0" />
-      <point x="128.25" y="760.0" />
-      <point x="-40.75" y="35.0" />
+      <point x="46.0" y="-35.0" />
+      <point x="167.5" y="575.0" />
+      <point x="349.1666666666667" y="575.0" />
+      <point x="-54.333333333333314" y="35.0" />
+    </edge>
+    <edge source="Grid" target="Player">
+      <point x="-116.14285714285711" y="-90.5" />
+      <point x="482.6071428571429" y="575.0" />
+      <point x="457.83333333333337" y="575.0" />
+      <point x="54.33333333333337" y="35.0" />
     </edge>
     <edge source="SeaSpot" target="Spot">
       <point x="0.0" y="-13.0" />
-      <point x="121.75" y="569.0" />
-      <point x="129.0" y="569.0" />
-      <point x="-52.0" y="57.5" />
+      <point x="693.0494227994228" y="248.0" />
+      <point x="664.7857142857142" y="248.0" />
+      <point x="0.0" y="57.5" />
     </edge>
     <edge source="Destroyers" target="Boat">
-      <point x="0.0" y="-13.0" />
-      <point x="58.0" y="250.0" />
-      <point x="201.125" y="250.0" />
-      <point x="-88.875" y="112.5" />
+      <point x="-31.75" y="-24.0" />
+      <point x="1240.0" y="545.0" />
+      <point x="1018.5681818181818" y="545.0" />
+      <point x="93.81818181818176" y="123.5" />
+    </edge>
+    <edge source="Boat" target="Spot">
+      <point x="-64.5" y="-123.5" />
+      <point x="860.25" y="238.0" />
+      <point x="694.4999999999999" y="238.0" />
+      <point x="29.714285714285666" y="57.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.391715910834713" x="107.83681308757684" y="543.6495493744727" />
+  <settings layout="Hierarchic Group" zoom="0.602606453273601" x="336.2669405050261" y="414.00845462433927" />
   <SelectedNodes>
-    <node>Grid</node>
+    <node>Game</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

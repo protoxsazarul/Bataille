@@ -1,10 +1,19 @@
 import java.util.Map;
 
 public class Grid {
+    private boolean hasPlayed;
     private Player player;
     private Spot[][] spots = new Spot[10][10];
     private Boat[] boats = new Boat[5];
     private Map<String, Integer> mappingCoord;
+
+    public boolean isHasPlayed() {
+        return hasPlayed;
+    }
+
+    public void setHasPlayed(boolean hasPlayed) {
+        this.hasPlayed = hasPlayed;
+    }
 
     public boolean spotAlreadyPlayed(Spot spot) {
         return spot.isTouched();
