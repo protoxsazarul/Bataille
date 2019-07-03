@@ -23,7 +23,7 @@
       <node>Spot</node>
       <value>getSpots renvoie une list de list de spots</value>
       <edge>
-        <point x="0.0" y="-57.5" />
+        <point x="0.0" y="-58.5" />
         <point x="0.0" y="16.5" />
       </edge>
     </note>
@@ -80,7 +80,7 @@
   </edges>
   <settings layout="Hierarchic Group" zoom="0.391715910834713" x="107.83681308757684" y="543.6495493744727" />
   <SelectedNodes>
-    <node>Constants</node>
+    <node>Grid</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

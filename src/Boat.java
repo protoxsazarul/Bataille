@@ -28,4 +28,18 @@ public abstract class Boat {
     public void setBoatSpots(List<Spot> boatSpots) {
         this.boatSpots = boatSpots;
     }
+    
+    public void setUpdateSinked(List<Boat> boats){
+        for (Boat boat : boats)
+        {
+            boolean result = true;
+            for ( Spot spot : boat.getBoatSpots()){
+                if (!spot.isTouched()){
+                    result = false;
+                }
+            }
+            boat.setIsSinked( result );
+            
+        }
+    }
 }
