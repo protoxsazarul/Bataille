@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="087ecc01-df5b-4060-b4cc-f8ec0cdc6020" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uml_bataille.uml" beforeDir="false" afterPath="$PROJECT_DIR$/uml_bataille.uml" afterDir="false" />
     </list>
@@ -13,8 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Bataille" />
@@ -24,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="168">
               <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
@@ -33,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
+            <state relative-caret-position="21">
               <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
             </state>
           </provider>
@@ -42,154 +43,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uml_bataille.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement />
-              <nodes>
-                <node x="426.25000000000006" y="84.0">Spot</node>
-                <node x="533.0" y="566.0">Grid</node>
-                <node x="121.0" y="643.5">Destroyers</node>
-                <node x="939.0" y="632.5">Computer</node>
-                <node x="791.0" y="632.5">Human</node>
-                <node x="806.1323529411765" y="347.5">Player</node>
-                <node x="0.0" y="981.0">Constants</node>
-                <node x="0.0" y="643.5">Submarine</node>
-                <node x="224.19117647058823" y="369.5">SeaSpot</node>
-                <node x="419.0" y="643.5">Cruisers</node>
-                <node x="580.0" y="798.0">Game</node>
-                <node x="110.19117647058823" y="369.5">BoatSpot</node>
-                <node x="249.0" y="643.5">AircraftCarriers</node>
-                <node x="331.19117647058823" y="270.0">Boat</node>
-              </nodes>
-              <notes>
-                <note x="336.25000000000006" y="0.0">
-                  <node>Spot</node>
-                  <value>getSpots renvoie une list de list de spots</value>
-                  <edge>
-                    <point x="0.0" y="-58.0" />
-                    <point x="0.0" y="17.0" />
-                  </edge>
-                </note>
-              </notes>
-              <edges>
-                <edge source="BoatSpot" target="Spot">
-                  <point x="0.0" y="-13.5" />
-                  <point x="157.19117647058823" y="220.0" />
-                  <point x="439.25000000000006" y="220.0" />
-                  <point x="-78.0" y="58.0" />
-                </edge>
-                <edge source="Grid" target="Boat">
-                  <point x="-102.0" y="-91.0" />
-                  <point x="550.0" y="536.0" />
-                  <point x="462.9768907563025" y="536.0" />
-                  <point x="29.285714285714278" y="113.0" />
-                </edge>
-                <edge source="Game" target="Grid">
-                  <point x="36.0" y="-69.0" />
-                  <point x="688.0" y="773.0" />
-                  <point x="711.5" y="773.0" />
-                  <point x="59.5" y="91.0" />
-                </edge>
-                <edge source="AircraftCarriers" target="Boat">
-                  <point x="0.0" y="-13.5" />
-                  <point x="324.0" y="546.0" />
-                  <point x="404.40546218487395" y="546.0" />
-                  <point x="-29.285714285714278" y="113.0" />
-                </edge>
-                <edge source="Human" target="Player">
-                  <point x="0.0" y="-24.5" />
-                  <point x="855.0" y="546.0" />
-                  <point x="878.1323529411765" y="546.0" />
-                  <point x="0.0" y="35.5" />
-                </edge>
-                <edge source="Submarine" target="Boat">
-                  <point x="0.0" y="-13.5" />
-                  <point x="50.5" y="526.0" />
-                  <point x="345.8340336134454" y="526.0" />
-                  <point x="-87.85714285714283" y="113.0" />
-                </edge>
-                <edge source="Cruisers" target="Boat">
-                  <point x="0.0" y="-13.5" />
-                  <point x="466.0" y="546.0" />
-                  <point x="433.69117647058823" y="546.0" />
-                  <point x="0.0" y="113.0" />
-                </edge>
-                <edge source="Grid" target="Spot">
-                  <point x="0.0" y="-91.0" />
-                  <point x="652.0" y="546.0" />
-                  <point x="675.0" y="546.0" />
-                  <point x="675.0" y="250.0" />
-                  <point x="543.25" y="250.0" />
-                  <point x="26.0" y="58.0" />
-                </edge>
-                <edge source="Computer" target="Player">
-                  <point x="0.0" y="-24.5" />
-                  <point x="1003.0" y="546.0" />
-                  <point x="926.1323529411765" y="546.0" />
-                  <point x="48.0" y="35.5" />
-                </edge>
-                <edge source="Grid" target="Player">
-                  <point x="102.0" y="-91.0" />
-                  <point x="754.0" y="546.0" />
-                  <point x="830.1323529411765" y="546.0" />
-                  <point x="-48.0" y="35.5" />
-                </edge>
-                <edge source="SeaSpot" target="Spot">
-                  <point x="0.0" y="-13.5" />
-                  <point x="267.69117647058823" y="230.0" />
-                  <point x="465.25000000000006" y="230.0" />
-                  <point x="-52.0" y="58.0" />
-                </edge>
-                <edge source="Destroyers" target="Boat">
-                  <point x="0.0" y="-13.5" />
-                  <point x="175.0" y="536.0" />
-                  <point x="375.1197478991597" y="536.0" />
-                  <point x="-58.571428571428555" y="113.0" />
-                </edge>
-                <edge source="Boat" target="Spot">
-                  <point x="51.25000000000006" y="-113.0" />
-                  <point x="484.9411764705883" y="250.0" />
-                  <point x="517.25" y="250.0" />
-                  <point x="0.0" y="58.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.7770522388059702" x="-212.57503001200473" y="298.85954381752697" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-                <Category>Inner Classes</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Computer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="84">
+              <caret line="4" column="70" lean-forward="true" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Computer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="262">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -214,23 +92,22 @@
       <list>
         <option value="$PROJECT_DIR$/src/Boat.java" />
         <option value="$PROJECT_DIR$/src/Grid.java" />
-        <option value="$PROJECT_DIR$/src/Computer.java" />
         <option value="$PROJECT_DIR$/src/Constants.java" />
+        <option value="$PROJECT_DIR$/src/Computer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-7" />
+    <option name="y" value="23" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,12 +124,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -283,6 +165,7 @@
       <workItem from="1562052050917" duration="10285000" />
       <workItem from="1562139528346" duration="15000" />
       <workItem from="1562139730067" duration="1417000" />
+      <workItem from="1562141366354" duration="2239000" />
     </task>
     <task id="LOCAL-00001" summary="modification du get et seter de isSink de Boat">
       <created>1562053701746</created>
@@ -316,10 +199,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13174000" />
+    <option name="totallyTimeSpent" value="15413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -327,7 +210,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Learn" order="4" weight="0.3297587" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49779737" weight="0.10660981" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49779737" visible="true" weight="0.15665236" />
       <window_info id="Favorites" order="6" sideWeight="0.50220263" side_tool="true" weight="0.12935656" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,27 +301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Computer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -555,7 +417,7 @@
               <point x="0.0" y="58.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.7770522388059702" x="-212.57503001200473" y="298.85954381752697" />
+          <settings layout="Hierarchic Group" zoom="0.7770522388059702" x="-213.0" y="299.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -568,19 +430,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="84">
+          <caret line="4" column="70" lean-forward="true" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="262">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
           </folding>
         </state>
       </provider>
