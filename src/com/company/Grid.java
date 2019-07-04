@@ -1,14 +1,9 @@
 package com.company;
 
-import com.company.AircraftCarriers;
-import com.company.Cruisers;
-import com.company.Destroyers;
-import com.company.Submarine;
-
-import java.lang.reflect.Array;
-import java.util.*;
-
-import static com.company.Direction.LEFT;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 public class Grid {
     private Player player;
@@ -22,11 +17,13 @@ public class Grid {
         directions.add(Direction.RIGHT);
         directions.add(Direction.UP);
         directions.add(Direction.DOWN);
+        for (int row = 0; row < 10; row++) {
+            for (int col = 0; col < 10; col++) {
+                gridSpots[row][col] = new SeaSpot();
+            }
+        }
         for (Boat boat : boats) {
             this.boatPlacer(boat);
-        }
-        for (int row = 0; row < 10; row++) {
-            
         }
     }
 
@@ -73,30 +70,101 @@ public class Grid {
             - lancer le setter de Boat.boatSpots (boatSpots)
         */
 
-        int nbSpot = boat.getNbSpots();
-        int row = (int) Math.floor(Math.random() * 10);
-        int column = (int) Math.floor(Math.random() * 10);
-        Spot randomSpot = gridSpots[row][column];
-        List<Spot> boatSpots = new ArrayList<>();
-        BoatSpot boatSpot;
+        boolean isPossibleBoatPlacement = false;
 
-        Collections.shuffle(this.directions);
+        do {
+            int nbSpot = boat.getNbSpots();
+            int row = (int) Math.floor(Math.random() * 10);
+            int column = (int) Math.floor(Math.random() * 10);
+            Spot randomSpot = gridSpots[row][column];
+            List<Spot> boatSpots = new ArrayList<>();
+
+            Collections.shuffle(this.directions);
 
             switch (this.directions.get(0)) {
                 case LEFT :
-                    if (row-nbSpot >=0) {
+                    System.out.println("left");
+                    if (row - nbSpot >=0) {
+                        for (int x = 0; x < nbSpot; x++) {
+                            Spot currentSpot = gridSpots[row - x][column];
+                            isPossibleBoatPlacement = true;
+                            boolean testSeaSpot = currentSpot instanceof SeaSpot;
+                            isPossibleBoatPlacement &= testSeaSpot;
+                        }
                         // loop sur le nombre de spot du bateau
-                        for (int spotNum = 0; spotNum < nbSpot; spotNum++) {
-
-                            boatSpots.add();
+                        for (int x = 0; x < nbSpot; x++) {
+                            BoatSpot boatSpot = new BoatSpot(boat);
+                            gridSpots[row - x][column] = boatSpot;
+                            boatSpots.add(boatSpot);
                         }
                         boat.setBoatSpots(boatSpots);
-                        break;
                     }
+                    break;
+                case RIGHT:
+                    System.out.println("right");
+                    if (row + nbSpot <= 9) {
+                        for (int x = 0; x < nbSpot; x++) {
+                            Spot currentSpot = gridSpots[row + x][column];
+                            isPossibleBoatPlacement = true;
+                            boolean testSeaSpot = currentSpot instanceof SeaSpot;
+                            isPossibleBoatPlacement &= testSeaSpot;
+                        }                        // loop sur le nombre de spot du bateau
+                        for (int x = 0; x < nbSpot; x++) {
+                            BoatSpot boatSpot = new BoatSpot(boat);
+                            gridSpots[row + x][column] = boatSpot;
+                            boatSpots.add(boatSpot);
+                        }
+                        boat.setBoatSpots(boatSpots);
+                    }
+                    break;
+                case UP:
+                    System.out.println("up");
+                    if (column - nbSpot >= 0) {
+                        for (int y = 0; y < nbSpot; y++) {
+                            Spot currentSpot = gridSpots[row][column - y];
+                            isPossibleBoatPlacement = true;
+                            boolean testSeaSpot = currentSpot instanceof SeaSpot;
+                            isPossibleBoatPlacement &= testSeaSpot;
+                        }
+                        // loop sur le nombre de spot du bateau
+                        for (int y = 0; y < nbSpot; y++) {
+                            BoatSpot boatSpot = new BoatSpot(boat);
+                            gridSpots[row][column - y] = boatSpot;
+                            boatSpots.add(boatSpot);
+                        }
+                        boat.setBoatSpots(boatSpots);
+                    }
+                    break;
+                case DOWN:
+                    System.out.println("down");
+                    if (column + nbSpot <= 9) {
+                        for (int y = 0; y < nbSpot; y++) {
+                            Spot currentSpot = gridSpots[row][column + y];
+                            isPossibleBoatPlacement = true;
+                            boolean testSeaSpot = currentSpot instanceof SeaSpot;
+                            isPossibleBoatPlacement &= testSeaSpot;
+                        }
+                        // loop sur le nombre de spot du bateau
+                        for (int y = 0; y < nbSpot; y++) {
+                            BoatSpot boatSpot = new BoatSpot(boat);
+                            gridSpots[row][column + y] = boatSpot;
+                            boatSpots.add(boatSpot);
+                        }
+                        boat.setBoatSpots(boatSpots);
+                    }
+                    break;
             }
+        } while (!isPossibleBoatPlacement);
+    }
 
-
-
-
+    public String toString () {
+        String result = "";
+        for (int row = 0; row < 10; row++) {
+            for (int col = 0; col < 10; col++) {
+                result += gridSpots[row][col];
+            }
+            result += "\n";
+        }
+        return result;
     }
 }
