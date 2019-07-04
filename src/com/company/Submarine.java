@@ -1,8 +1,6 @@
 package com.company;
 
-import com.company.Test;
-
-public class Submarine extends Test.Boat {
+public class Submarine extends Boat {
 	public Submarine(){
 		setNbSpots( 3 );
 		
