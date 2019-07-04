@@ -34,6 +34,14 @@ public class Grid {
         return player;
     }
 
+    public Boat[] getBoats() {
+        return boats;
+    }
+
+    public void setBoats(Boat[] boats) {
+        this.boats = boats;
+    }
+
     public void setPlayer(Player player) {
         this.player = player;
     }
