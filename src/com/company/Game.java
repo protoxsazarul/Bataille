@@ -11,10 +11,14 @@ public class Game {
     return false;
   }
 
-  public void isLooser(Grid grid) {
-    if (grid.checkBoats()) {
-      System.out.println(currentGrid + "a perdu");
+  public boolean isLooser(Grid grid) {
+    for (Boat boat : grid.getBoats())
+    {
+      if (!boat.isSinked()){
+        return false;
+      }
     }
+    return true;
   }
 
   // faire la toString de currentGrid
@@ -56,9 +60,24 @@ public class Game {
   public void play(){
     firstPlayer();
     while (!checkVictory()) {
-        currentGrid.getPlayer().getChoice();
+      Spot currentSpot = null; // Le spot choisi par le joueur
+      String currentChoice = null;
+      do {
+        currentChoice = currentGrid.getPlayer().getChoice();
+      } while (currentSpot.isTouched());
+       currentSpot.setTouched(true);
+       if (currentSpot instanceof SeaSpot){
+         System.out.println("Raté sale noob");
+         changePlayer();
+       } else if (currentSpot instanceof BoatSpot){
+         System.out.println("Touché");
+        if(((BoatSpot) currentSpot).getBoat().isSinked()){
+          System.out.println("Coulé");
+            if (currentGrid.isLooser()){
 
-
+            }
+        }
+       }
     }
   }
 
