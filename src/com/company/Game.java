@@ -58,6 +58,7 @@ public class Game {
     while (!checkVictory()) {
         currentGrid.getPlayer().getChoice();
 
+
     }
   }
 

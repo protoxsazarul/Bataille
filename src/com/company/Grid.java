@@ -30,6 +30,14 @@ public class Grid {
         }
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
     public boolean spotAlreadyPlayed(Spot spot) {
         return spot.isTouched();
     }
