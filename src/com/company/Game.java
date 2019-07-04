@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Random;
 
 public class Game {
@@ -31,7 +33,7 @@ public class Game {
    * Changement de la currentGrid
    * relance Play
    * Si tous les bateaux sont coulés, currentGrid isLooser
-   * L'autre Grid isWinner
+   * L'autre com.company.Grid isWinner
    * checkVictory true
    * GG !
    */

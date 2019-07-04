@@ -9,9 +9,20 @@
     <list default="true" id="087ecc01-df5b-4060-b4cc-f8ec0cdc6020" name="Default Changelist" comment="debut du coding">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/AircraftCarriers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AircraftCarriers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/BoatSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BoatSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Cruisers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Cruisers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Destroyers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Destroyers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SeaSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SeaSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Spot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Spot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Submarine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Submarine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uml_bataille.uml" beforeDir="false" afterPath="$PROJECT_DIR$/uml_bataille.uml" afterDir="false" />
 >>>>>>> master
     </list>
@@ -42,8 +53,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
               <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
@@ -266,12 +277,11 @@
 =======
         <entry file="file://$PROJECT_DIR$/src/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="-7">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
                 <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#352#353#0" expanded="true" />
-                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
               </folding>
 >>>>>>> master
             </state>
@@ -328,6 +338,15 @@
                 <element signature="imports" expanded="true" />
               </folding>
 >>>>>>> master
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Destroyers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -452,6 +471,7 @@
 =======
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,7 +576,9 @@
       <workItem from="1562052050917" duration="10285000" />
       <workItem from="1562139528346" duration="15000" />
       <workItem from="1562139730067" duration="1417000" />
-      <workItem from="1562141366354" duration="4296000" />
+      <workItem from="1562141366354" duration="6043000" />
+      <workItem from="1562222175278" duration="77000" />
+      <workItem from="1562226046565" duration="3042000" />
     </task>
     <task id="LOCAL-00001" summary="modification du get et seter de isSink de Boat">
       <created>1562053701746</created>
@@ -590,10 +612,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17470000" />
+    <option name="totallyTimeSpent" value="22336000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -601,11 +623,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Learn" order="4" weight="0.3297587" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49779737" visible="true" weight="0.15665236" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49779737" visible="true" weight="0.18174475" />
       <window_info id="Favorites" order="6" sideWeight="0.50220263" side_tool="true" weight="0.12935656" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32913166" />
       <window_info anchor="bottom" id="Run" order="2" />
 >>>>>>> master
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -736,37 +758,18 @@
     <MESSAGE value="ajouter la method boatPlacer avec ses commentaires" />
     <MESSAGE value="ajout de mappingCoord dans Grid" />
     <MESSAGE value="debut du coding" />
-    <option name="LAST_COMMIT_MESSAGE" value="debut du coding" />
+    <MESSAGE value="Début du code play()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Début du code play()" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BoatSpot.java">
+    <entry file="file://$PROJECT_DIR$/src/Boat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="399">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -843,8 +846,8 @@
             <node x="809.75" y="268.0">Boat</node>
           </nodes>
           <notes>
-            <note x="493.91071428571433" y="0.0">
-              <node>Spot</node>
+            <note x="0.0" y="390.0">
+              <node>com.company.Spot</node>
               <value>getSpots renvoie une list de list de spots</value>
               <edge>
                 <point x="0.0" y="-57.5" />
@@ -946,87 +949,47 @@
               <point x="674.9107142857143" y="248.0" />
               <point x="0.0" y="57.5" />
             </edge>
-            <edge source="Human" target="Constants">
-              <point x="-39.75" y="-24.0" />
-              <point x="-75.5" y="46.0" />
+            <edge source="com.company.Computer" target="com.company.Player">
+              <point x="0.0" y="-35.0" />
+              <point x="92.0" y="804.0" />
+              <point x="147.0" y="804.0" />
+              <point x="-40.75" y="35.0" />
             </edge>
-            <edge source="Grid" target="Boat">
-              <point x="77.42857142857144" y="-90.5" />
-              <point x="682.4285714285716" y="545.0" />
-              <point x="844.9318181818182" y="545.0" />
-              <point x="-93.81818181818176" y="123.5" />
+            <edge source="com.company.Human" target="com.company.Player">
+              <point x="0.0" y="-24.0" />
+              <point x="283.5" y="804.0" />
+              <point x="228.5" y="804.0" />
+              <point x="40.75" y="35.0" />
             </edge>
-            <edge source="Computer" target="Constants">
-              <point x="-46.0" y="-35.0" />
-              <point x="311.50000000000006" y="565.0" />
-              <point x="226.5" y="565.0" />
-              <point x="75.5" y="46.0" />
+            <edge source="com.company.Destroyers" target="Boat">
+              <point x="0.0" y="-24.0" />
+              <point x="63.5" y="272.0" />
+              <point x="210.0" y="272.0" />
+              <point x="-96.75" y="123.5" />
             </edge>
-            <edge source="Game" target="Grid">
-              <point x="41.0" y="-79.5" />
-              <point x="637.1416847041847" y="801.0" />
-              <point x="672.75" y="801.0" />
-              <point x="67.75" y="90.5" />
-            </edge>
-            <edge source="AircraftCarriers" target="Boat">
-              <point x="39.5" y="-24.0" />
-              <point x="1302.0" y="535.0" />
-              <point x="1056.0227272727273" y="535.0" />
-              <point x="117.27272727272725" y="123.5" />
-            </edge>
-            <edge source="Submarine" target="Boat">
-              <point x="31.25" y="-24.0" />
-              <point x="1001.25" y="575.0" />
-              <point x="962.2045454545455" y="575.0" />
-              <point x="23.454545454545496" y="123.5" />
-            </edge>
-            <edge source="Human" target="Player">
-              <point x="39.75" y="-24.0" />
-              <point x="155.0" y="575.0" />
-              <point x="349.16666666666674" y="575.0" />
-              <point x="-54.333333333333314" y="35.0" />
-            </edge>
-            <edge source="Cruisers" target="Boat">
-              <point x="27.75" y="-24.0" />
-              <point x="1135.75" y="555.0" />
-              <point x="1009.1136363636363" y="555.0" />
-              <point x="70.36363636363626" y="123.5" />
-            </edge>
-            <edge source="Grid" target="Spot">
-              <point x="0.0" y="-90.5" />
-              <point x="605.0" y="575.0" />
-              <point x="577.2857142857143" y="575.0" />
-              <point x="577.2857142857143" y="248.0" />
-              <point x="645.1964285714287" y="248.0" />
-              <point x="-29.714285714285666" y="57.5" />
-            </edge>
-            <edge source="Computer" target="Player">
-              <point x="46.0" y="-35.0" />
-              <point x="0.0" y="35.0" />
-            </edge>
-            <edge source="Grid" target="Player">
-              <point x="-116.14285714285711" y="-90.5" />
-              <point x="488.85714285714295" y="575.0" />
-              <point x="457.8333333333334" y="575.0" />
-              <point x="54.33333333333337" y="35.0" />
-            </edge>
-            <edge source="SeaSpot" target="Spot">
+            <edge source="com.company.SeaSpot" target="com.company.Spot">
               <point x="0.0" y="-13.0" />
-              <point x="1135.25" y="218.0" />
-              <point x="764.0535714285714" y="218.0" />
-              <point x="89.14285714285711" y="57.5" />
+              <point x="121.75" y="613.0" />
+              <point x="129.0" y="613.0" />
+              <point x="-52.0" y="57.5" />
             </edge>
-            <edge source="Destroyers" target="Boat">
-              <point x="-31.75" y="-24.0" />
-              <point x="792.25" y="565.0" />
-              <point x="891.8409090909092" y="565.0" />
-              <point x="-46.90909090909088" y="123.5" />
+            <edge source="com.company.Submarine" target="Boat">
+              <point x="0.0" y="-24.0" />
+              <point x="387.5" y="272.0" />
+              <point x="339.0" y="272.0" />
+              <point x="32.25" y="123.5" />
             </edge>
-            <edge source="Boat" target="Spot">
-              <point x="-64.5" y="-123.5" />
-              <point x="874.25" y="238.0" />
-              <point x="704.625" y="238.0" />
-              <point x="29.714285714285666" y="57.5" />
+            <edge source="com.company.Cruisers" target="Boat">
+              <point x="0.0" y="-24.0" />
+              <point x="525.5" y="272.0" />
+              <point x="403.5" y="272.0" />
+              <point x="96.75" y="123.5" />
+            </edge>
+            <edge source="com.company.BoatSpot" target="com.company.Spot">
+              <point x="0.0" y="-13.0" />
+              <point x="240.25" y="613.0" />
+              <point x="233.0" y="613.0" />
+              <point x="52.0" y="57.5" />
             </edge>
           </edges>
           <settings layout="Hierarchic Group" zoom="0.602606453273601" x="-243.71357264974546" y="192.47083371972695" />
@@ -1152,15 +1115,53 @@
 =======
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        <state relative-caret-position="294">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/BoatSpot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cruisers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Destroyers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="e#301#302#0" expanded="true" />
             <element signature="e#352#353#0" expanded="true" />
@@ -1191,6 +1192,37 @@
         <state relative-caret-position="483">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
 >>>>>>> master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/SeaSpot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="method#isLooser#0;class#Game#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/AircraftCarriers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
         </state>
       </provider>
     </entry>

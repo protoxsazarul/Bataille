@@ -1,6 +1,5 @@
-import java.lang.Math;
-import java.util.HashMap;
-import java.util.Map;
+package com.company;
+
 import java.util.Random;
 
 public class Computer extends Player {
