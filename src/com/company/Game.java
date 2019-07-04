@@ -1,8 +1,13 @@
+import java.util.Random;
+
 public class Game {
   private Grid grid1;
   private Grid grid2;
   private Grid currentGrid;
 
+  public boolean checkVictory() {
+    return false;
+  }
 
   public void isLooser(Grid grid) {
     if (grid.checkBoats()) {
@@ -30,7 +35,28 @@ public class Game {
    * checkVictory true
    * GG !
    */
-  public void play() {
-
+  public void firstPlayer(){
+    Random random = new Random();
+    int whoPlays = random.nextInt(2);
+    if (whoPlays == 0){
+      currentGrid = grid1;
+    } else if (whoPlays == 1){
+      currentGrid = grid2;
+    }
   }
+  public void changePlayer() {
+    if (currentGrid == grid1) {
+      currentGrid = grid2;
+    } else {
+      currentGrid = grid1;
+    }
+  }
+  public void play(){
+    firstPlayer();
+    while (!checkVictory()) {
+        currentGrid.getPlayer().getChoice();
+
+    }
+  }
+
 }
