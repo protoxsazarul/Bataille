@@ -12,7 +12,7 @@ import static com.company.Direction.LEFT;
 
 public class Grid {
     private Player player;
-    private Spot[][] spots = new Spot[10][10];
+    private Spot[][] gridSpots = new Spot[10][10];
     private Boat[] boats = new Boat[]{ new AircraftCarriers(), new Cruisers(), new Destroyers(), new Submarine(), new Submarine() };
     private Map<String, Integer> mappingCoord;
     private List<Direction> directions = new ArrayList<>();
@@ -24,6 +24,9 @@ public class Grid {
         directions.add(Direction.DOWN);
         for (Boat boat : boats) {
             this.boatPlacer(boat);
+        }
+        for (int row = 0; row < 10; row++) {
+            
         }
     }
 
@@ -65,13 +68,23 @@ public class Grid {
         int nbSpot = boat.getNbSpots();
         int row = (int) Math.floor(Math.random() * 10);
         int column = (int) Math.floor(Math.random() * 10);
-        Spot randomSpot = spots[row][column];
+        Spot randomSpot = gridSpots[row][column];
+        List<Spot> boatSpots = new ArrayList<>();
+        BoatSpot boatSpot;
 
         Collections.shuffle(this.directions);
 
             switch (this.directions.get(0)) {
                 case LEFT :
+                    if (row-nbSpot >=0) {
+                        // loop sur le nombre de spot du bateau
+                        for (int spotNum = 0; spotNum < nbSpot; spotNum++) {
 
+                            boatSpots.add();
+                        }
+                        boat.setBoatSpots(boatSpots);
+                        break;
+                    }
             }
 
 
