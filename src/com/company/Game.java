@@ -79,7 +79,7 @@ public class Game {
       String currentChoice = null;
       do {
         currentChoice = currentGrid.getPlayer().getChoice();
-        
+
         if (currentSpot.isTouched()){
           System.out.println("T'as déjà tiré ici gros débile");
         }
