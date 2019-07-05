@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import static com.company.Direction.DOWN;
+
 public class Grid {
     private Player player;
     private Spot[][] gridSpots = new Spot[10][10];
@@ -16,7 +18,7 @@ public class Grid {
         directions.add(Direction.LEFT);
         directions.add(Direction.RIGHT);
         directions.add(Direction.UP);
-        directions.add(Direction.DOWN);
+        directions.add(DOWN);
         for (int row = 0; row < 10; row++) {
             for (int col = 0; col < 10; col++) {
                 gridSpots[row][col] = new SeaSpot();
@@ -90,15 +92,18 @@ public class Grid {
             Collections.shuffle(this.directions);
 
             switch (this.directions.get(0)) {
-                case LEFT :
-                    System.out.println("left");
-                    if (row - nbSpot >=0) {
+                case LEFT:
+                    if (row - nbSpot >= 0) { // si le bateau entier rentre dans la grille
+                        isPossibleBoatPlacement = true;
+
                         for (int x = 0; x < nbSpot; x++) {
                             Spot currentSpot = gridSpots[row - x][column];
-                            isPossibleBoatPlacement = true;
                             boolean testSeaSpot = currentSpot instanceof SeaSpot;
                             isPossibleBoatPlacement &= testSeaSpot;
                         }
+                    }
+
+                    if(isPossibleBoatPlacement) {
                         // loop sur le nombre de spot du bateau
                         for (int x = 0; x < nbSpot; x++) {
                             BoatSpot boatSpot = new BoatSpot(boat);
@@ -109,14 +114,16 @@ public class Grid {
                     }
                     break;
                 case RIGHT:
-                    System.out.println("right");
                     if (row + nbSpot <= 9) {
+                        isPossibleBoatPlacement = true;
+
                         for (int x = 0; x < nbSpot; x++) {
                             Spot currentSpot = gridSpots[row + x][column];
-                            isPossibleBoatPlacement = true;
                             boolean testSeaSpot = currentSpot instanceof SeaSpot;
                             isPossibleBoatPlacement &= testSeaSpot;
-                        }                        // loop sur le nombre de spot du bateau
+                        }
+                    }
+                    if(isPossibleBoatPlacement) {// loop sur le nombre de spot du bateau
                         for (int x = 0; x < nbSpot; x++) {
                             BoatSpot boatSpot = new BoatSpot(boat);
                             gridSpots[row + x][column] = boatSpot;
@@ -126,14 +133,16 @@ public class Grid {
                     }
                     break;
                 case UP:
-                    System.out.println("up");
                     if (column - nbSpot >= 0) {
+                        isPossibleBoatPlacement = true;
+
                         for (int y = 0; y < nbSpot; y++) {
                             Spot currentSpot = gridSpots[row][column - y];
-                            isPossibleBoatPlacement = true;
                             boolean testSeaSpot = currentSpot instanceof SeaSpot;
                             isPossibleBoatPlacement &= testSeaSpot;
                         }
+                    }
+                    if(isPossibleBoatPlacement) {
                         // loop sur le nombre de spot du bateau
                         for (int y = 0; y < nbSpot; y++) {
                             BoatSpot boatSpot = new BoatSpot(boat);
@@ -144,14 +153,16 @@ public class Grid {
                     }
                     break;
                 case DOWN:
-                    System.out.println("down");
                     if (column + nbSpot <= 9) {
+                        isPossibleBoatPlacement = true;
+
                         for (int y = 0; y < nbSpot; y++) {
                             Spot currentSpot = gridSpots[row][column + y];
-                            isPossibleBoatPlacement = true;
                             boolean testSeaSpot = currentSpot instanceof SeaSpot;
                             isPossibleBoatPlacement &= testSeaSpot;
                         }
+                    }
+                    if(isPossibleBoatPlacement) {
                         // loop sur le nombre de spot du bateau
                         for (int y = 0; y < nbSpot; y++) {
                             BoatSpot boatSpot = new BoatSpot(boat);

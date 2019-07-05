@@ -73,9 +73,7 @@ public class Game {
          System.out.println("Touché");
         if(((BoatSpot) currentSpot).getBoat().isSinked()){
           System.out.println("Coulé");
-            if (currentGrid.isLooser()){
 
-            }
         }
        }
     }
