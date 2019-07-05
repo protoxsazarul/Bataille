@@ -6,11 +6,13 @@ public class Game {
   private Grid grid1;
   private Grid grid2;
   private Grid currentGrid;
+  private Grid adverseGrid;
+  
 
   public boolean checkVictory() {
     return false;
   }
-
+  
   public boolean isLooser(Grid grid) {
     for (Boat boat : grid.getBoats())
     {
@@ -53,8 +55,10 @@ public class Game {
   public void changePlayer() {
     if (currentGrid == grid1) {
       currentGrid = grid2;
+      adverseGrid = grid1;
     } else {
       currentGrid = grid1;
+      adverseGrid = grid2;
     }
   }
   public void play(){
@@ -73,7 +77,9 @@ public class Game {
          System.out.println("Touché");
         if(((BoatSpot) currentSpot).getBoat().isSinked()){
           System.out.println("Coulé");
-
+          if (isLooser(adverseGrid)){
+            System.out.println( "Vous avez Gagné !" );
+          }
         }
        }
     }
