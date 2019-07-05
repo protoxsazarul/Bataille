@@ -14,6 +14,14 @@ public class Grid {
     private Map<String, Integer> mappingCoord;
     private List<Direction> directions = new ArrayList<>();
 
+    public Spot[][] getGridSpots() {
+        return gridSpots;
+    }
+
+    public void setGridSpots(Spot[][] gridSpots) {
+        this.gridSpots = gridSpots;
+    }
+
     public Grid () {
         directions.add(Direction.LEFT);
         directions.add(Direction.RIGHT);
@@ -178,9 +186,49 @@ public class Grid {
 
     public String toString () {
         String result = "";
+        result += "   ";
+        for (int coordRow = 0; coordRow < 10; coordRow++){
+            result += Constants.REVERSE_MAPPING.get(coordRow) + " ";
+        }
+        result += "\n";
         for (int row = 0; row < 10; row++) {
+            result += row + " |";
             for (int col = 0; col < 10; col++) {
-                result += gridSpots[row][col];
+                result += gridSpots[row][col] + "|";
+            }
+            result += "\n";
+        }
+        return result;
+    }
+    public String displayTouchedSpot(){
+        String result = "";
+        result += "   ";
+        for (int coordRow = 0; coordRow < 10; coordRow++)
+        {
+            result += Constants.REVERSE_MAPPING.get(coordRow) + " ";
+        }
+        result += "\n";
+        for (int row = 0; row < 10; row++)
+        {
+            result += row + " |";
+            for (int col = 0; col < 10; col++)
+            {
+                if (!gridSpots[row][col].isTouched())
+                {
+                    result += "_|";
+                }
+                else
+                {
+                    if (gridSpots[row][col] instanceof BoatSpot)
+                    {
+                        result += "O|";
+                    }
+                    else
+                    {
+                        result += "X|";
+                    }
+                }
+
             }
             result += "\n";
         }

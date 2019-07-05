@@ -3,8 +3,8 @@ package com.company;
 import java.util.Random;
 
 public class Game {
-  private Grid grid1;
-  private Grid grid2;
+  private Grid grid1 = new Grid();
+  private Grid grid2 = new Grid();
   private Grid currentGrid;
   private Grid adverseGrid;
 
@@ -44,8 +44,11 @@ public class Game {
     int whoPlays = random.nextInt(2);
     if (whoPlays == 0){
       currentGrid = grid1;
+      adverseGrid = grid2;
     } else if (whoPlays == 1){
       currentGrid = grid2;
+      adverseGrid = grid1;
+
     }
   }
   public void changePlayer() {
@@ -58,7 +61,9 @@ public class Game {
     }
   }
   public void play(){
+
     Human player1 = new Human();
+    System.out.println("Entre ton nom Ô Grand Maître absolu");
     player1.setName(Constants.SCAN.nextLine());
     grid1.setPlayer(player1);
     Computer player2 = new Computer();
@@ -78,13 +83,16 @@ public class Game {
       Spot currentSpot = null; // Le spot choisi par le joueur
       String currentChoice = null;
       do {
+        System.out.println("A toi de jouer, choisis un emplacement (Ex : B5)");
         currentChoice = currentGrid.getPlayer().getChoice();
-
+        String currentCol = currentChoice.charAt(0) + "";
+        int coordCol = Constants.MAPPING.get(currentCol);
+        int coordRow = Integer.parseInt(currentChoice.charAt(1) + "");
+        currentSpot = adverseGrid.getGridSpots()[coordRow][coordCol];
         if (currentSpot.isTouched()){
           System.out.println("T'as déjà tiré ici gros débile");
         }
         //Tir sur la case
-        System.out.println(currentGrid + " a envoyé la sauce sur l'emplacement " + currentChoice);
       } while (currentSpot.isTouched());
        currentSpot.setTouched(true);
        if (currentSpot instanceof SeaSpot){
@@ -92,10 +100,12 @@ public class Game {
          changePlayer();
        } else if (currentSpot instanceof BoatSpot){
          System.out.println("Touché");
+         ((BoatSpot) currentSpot).getBoat().setUpdateSinked();
         if(((BoatSpot) currentSpot).getBoat().isSinked()){
           System.out.println("Coulé");
           if (isLooser(adverseGrid)){
-            System.out.println(  currentGrid+" a gagné !" );
+            System.out.println(currentGrid.getPlayer().getName()+" a gagné !" );
+            changePlayer();
           } else {
             changePlayer();
           }
@@ -103,6 +113,7 @@ public class Game {
           changePlayer();
         }
        }
+      System.out.println(adverseGrid.displayTouchedSpot());
     }
     System.out.println("Partie terminée, bravo Colonel.");
   }
