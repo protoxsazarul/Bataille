@@ -7,7 +7,6 @@ public class Game {
   private Grid grid2;
   private Grid currentGrid;
   private Grid adverseGrid;
-  
 
   
   public boolean isLooser(Grid grid) {
@@ -67,13 +66,20 @@ public class Game {
     firstPlayer();
     System.out.println("La bataille commence, voici votre grille");
     System.out.println(grid1);
-    ystem.out.println("Vu que tu es un petit rageux, voici la grille du CPU");
-    System.out.println(grid2);
+    if (player1.getName().equals("cheater")) {
+      System.out.println("Vu que tu es un petit rageux, voici la grille du CPU");
+      System.out.println(grid2);
+    } else if (player1.getName().toUpperCase().equals("QUENTIN")
+            || player1.getName().toUpperCase().equals("PROTOXS")
+            || player1.getName().toUpperCase().equals("PROTOXSAZARUL")){
+      System.out.println("Ok Quentin... Ne rage pas si tu perds !");
+    }
     while (!isLooser(currentGrid)) {
       Spot currentSpot = null; // Le spot choisi par le joueur
       String currentChoice = null;
       do {
         currentChoice = currentGrid.getPlayer().getChoice();
+        
         if (currentSpot.isTouched()){
           System.out.println("T'as déjà tiré ici gros débile");
         }
