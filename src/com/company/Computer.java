@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class Computer extends Player {
 
+    public Computer(){
+        setName("CPU");
+    }
     public String getChoice() {
         Random random = new Random();
         int coordNum = random.nextInt(10);

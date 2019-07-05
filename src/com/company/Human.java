@@ -1,6 +1,9 @@
 package com.company;
 
 public class Human extends Player {
+    public Human(){
+
+    }
     public String getChoice() {
         System.out.println("Veuillez entrer les coordonnées de votre tir");
         String playerChoice = Constants.SCAN.nextLine().toUpperCase();

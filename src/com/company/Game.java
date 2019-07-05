@@ -9,9 +9,6 @@ public class Game {
   private Grid adverseGrid;
   
 
-  public boolean checkVictory() {
-    return false;
-  }
   
   public boolean isLooser(Grid grid) {
     for (Boat boat : grid.getBoats())
@@ -62,12 +59,26 @@ public class Game {
     }
   }
   public void play(){
+    Human player1 = new Human();
+    player1.setName(Constants.SCAN.nextLine());
+    grid1.setPlayer(player1);
+    Computer player2 = new Computer();
+    grid2.setPlayer(player2);
     firstPlayer();
-    while (!checkVictory()) {
+    System.out.println("La bataille commence, voici votre grille");
+    System.out.println(grid1);
+    ystem.out.println("Vu que tu es un petit rageux, voici la grille du CPU");
+    System.out.println(grid2);
+    while (!isLooser(currentGrid)) {
       Spot currentSpot = null; // Le spot choisi par le joueur
       String currentChoice = null;
       do {
         currentChoice = currentGrid.getPlayer().getChoice();
+        if (currentSpot.isTouched()){
+          System.out.println("T'as déjà tiré ici gros débile");
+        }
+        //Tir sur la case
+        System.out.println(currentGrid + " a envoyé la sauce sur l'emplacement " + currentChoice);
       } while (currentSpot.isTouched());
        currentSpot.setTouched(true);
        if (currentSpot instanceof SeaSpot){
@@ -78,11 +89,16 @@ public class Game {
         if(((BoatSpot) currentSpot).getBoat().isSinked()){
           System.out.println("Coulé");
           if (isLooser(adverseGrid)){
-            System.out.println( "Vous avez Gagné !" );
+            System.out.println(  currentGrid+" a gagné !" );
+          } else {
+            changePlayer();
           }
+        } else {
+          changePlayer();
         }
        }
     }
+    System.out.println("Partie terminée, bravo Colonel.");
   }
 
 }
