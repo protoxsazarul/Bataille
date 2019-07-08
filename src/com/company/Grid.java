@@ -200,6 +200,32 @@ public class Grid {
         }
         return result;
     }
+
+    public String displayPlayerTouchedGrid () {
+        String result = "";
+        result += "   ";
+        for (int coordRow = 0; coordRow < 10; coordRow++){
+            result += Constants.REVERSE_MAPPING.get(coordRow) + " ";
+        }
+        result += "\n";
+        for (int row = 0; row < 10; row++) {
+            result += row + " |";
+            for (int col = 0; col < 10; col++) {
+                if (gridSpots[row][col].isTouched()) {
+                    if (gridSpots[row][col] instanceof BoatSpot) {
+                        result += "O|";
+                    } else {
+                        result += "X|";
+                    }
+                } else {
+                    result += gridSpots[row][col] + "|";
+                }
+            }
+            result += "\n";
+        }
+        return result;
+    }
+
     public String displayTouchedSpot(){
         String result = "";
         result += "   ";
