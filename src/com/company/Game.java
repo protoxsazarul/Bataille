@@ -55,10 +55,18 @@ public class Game {
     if (currentGrid == grid1) {
       currentGrid = grid2;
       adverseGrid = grid1;
+
     } else {
       currentGrid = grid1;
       adverseGrid = grid2;
     }
+    System.out.println(adverseGrid.getPlayer().getName() + " a fini son tour \n");
+    System.out.println("Appuyez sur entrée pour continuer");
+    Constants.SCAN.nextLine();
+    System.out.println("\n");
+    System.out.println("______________________________________________________ \n");
+    System.out.println("Au tour de " + currentGrid.getPlayer().getName());
+    System.out.println("\n");
   }
   public void play(){
 
@@ -70,20 +78,18 @@ public class Game {
     grid2.setPlayer(player2);
     firstPlayer();
     System.out.println("La bataille commence, voici votre grille");
+    System.out.println("Grille de " + grid1.getPlayer().getName());
     System.out.println(grid1);
     if (player1.getName().equals("cheater")) {
       System.out.println("Vu que tu es un petit rageux, voici la grille du CPU");
+      System.out.println("Grille de " + grid2.getPlayer().getName());
       System.out.println(grid2);
-    } else if (player1.getName().toUpperCase().equals("QUENTIN")
-            || player1.getName().toUpperCase().equals("PROTOXS")
-            || player1.getName().toUpperCase().equals("PROTOXSAZARUL")){
-      System.out.println("Ok Quentin... Ne rage pas si tu perds !");
     }
     while (!isLooser(currentGrid)) {
       Spot currentSpot = null; // Le spot choisi par le joueur
       String currentChoice = null;
+      String coords = "";
       do {
-        System.out.println("A toi de jouer, choisis un emplacement (Ex : B5)");
         currentChoice = currentGrid.getPlayer().getChoice();
         String currentCol = currentChoice.charAt(0) + "";
         int coordCol = Constants.MAPPING.get(currentCol);
@@ -91,20 +97,24 @@ public class Game {
         currentSpot = adverseGrid.getGridSpots()[coordRow][coordCol];
         if (currentSpot.isTouched()){
           System.out.println("T'as déjà tiré ici gros débile");
+        } else {
+          coords = currentCol + coordRow;
         }
         //Tir sur la case
       } while (currentSpot.isTouched());
+      System.out.println(currentGrid.getPlayer().getName() + " a tiré sur " + coords + "\n");
        currentSpot.setTouched(true);
+      System.out.println(adverseGrid.displayTouchedSpot() + "\n");
        if (currentSpot instanceof SeaSpot){
-         System.out.println("Raté sale noob");
+         System.out.println("========= RATÉ =========");
          changePlayer();
        } else if (currentSpot instanceof BoatSpot){
-         System.out.println("Touché");
+         System.out.println("========= TOUCHÉ =========");
          ((BoatSpot) currentSpot).getBoat().setUpdateSinked();
         if(((BoatSpot) currentSpot).getBoat().isSinked()){
-          System.out.println("Coulé");
+          System.out.println("========= COULÉ =========");
           if (isLooser(adverseGrid)){
-            System.out.println(currentGrid.getPlayer().getName()+" a gagné !" );
+            System.out.println("========= " + currentGrid.getPlayer().getName()+" a gagné ! =========" );
             changePlayer();
           } else {
             changePlayer();
@@ -113,6 +123,7 @@ public class Game {
           changePlayer();
         }
        }
+       System.out.println("Voici la grille de " + adverseGrid.getPlayer().getName());
       System.out.println(adverseGrid.displayTouchedSpot());
     }
     System.out.println("Partie terminée, bravo Colonel.");
