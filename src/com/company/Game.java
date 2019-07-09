@@ -80,7 +80,7 @@ public class Game {
         System.out.println("Entre ton nom Ô Grand Maître absolu");
         player1.setName(Constants.SCAN.nextLine());
         grid1.setPlayer(player1);
-        Computer player2 = new Computer();
+        Computer player2 = new Computer(grid2);
         grid2.setPlayer(player2);
         firstPlayer();
         System.out.println("La bataille commence, voici votre grille");
@@ -140,4 +140,19 @@ public class Game {
         System.out.println("Partie terminée, bravo Colonel.");
     }
 
+    public Grid getCurrentGrid() {
+        return currentGrid;
+    }
+
+    public void setCurrentGrid(Grid currentGrid) {
+        this.currentGrid = currentGrid;
+    }
+
+    public Grid getAdverseGrid() {
+        return adverseGrid;
+    }
+
+    public void setAdverseGrid(Grid adverseGrid) {
+        this.adverseGrid = adverseGrid;
+    }
 }

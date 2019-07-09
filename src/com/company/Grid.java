@@ -9,7 +9,9 @@ import static com.company.Direction.DOWN;
 
 public class Grid {
     private Player player;
-    private Spot[][] gridSpots = new Spot[10][10];
+    private int nbRows = 10;
+    private int nbColumns = 10;
+    private Spot[][] gridSpots = new Spot[this.nbRows][this.nbColumns];
     private Boat[] boats = new Boat[]{ new AircraftCarriers(), new Cruisers(), new Destroyers(), new Submarine(), new Submarine() };
     private Map<String, Integer> mappingCoord;
     private List<Direction> directions = new ArrayList<>();
@@ -26,9 +28,9 @@ public class Grid {
         directions.add(Direction.LEFT);
         directions.add(Direction.RIGHT);
         directions.add(Direction.UP);
-        directions.add(DOWN);
-        for (int row = 0; row < 10; row++) {
-            for (int col = 0; col < 10; col++) {
+        directions.add(Direction.DOWN);
+        for (int row = 0; row < gridSpots.length; row++) {
+            for (int col = 0; col < gridSpots[row].length; col++) {
                 gridSpots[row][col] = new SeaSpot();
             }
         }
@@ -92,10 +94,10 @@ public class Grid {
 
         do {
             int nbSpot = boat.getNbSpots();
-            int row = (int) Math.floor(Math.random() * 10);
-            int column = (int) Math.floor(Math.random() * 10);
+            int row = (int) Math.floor(Math.random() * this.nbRows);
+            int column = (int) Math.floor(Math.random() * this.nbColumns);
             Spot randomSpot = gridSpots[row][column];
-            List<Spot> boatSpots = new ArrayList<>();
+            List<Spot>boatSpots = new ArrayList<>();
 
             Collections.shuffle(this.directions);
 
@@ -122,7 +124,7 @@ public class Grid {
                     }
                     break;
                 case RIGHT:
-                    if (row + nbSpot <= 9) {
+                    if (row + nbSpot <= this.nbRows) {
                         isPossibleBoatPlacement = true;
 
                         for (int x = 0; x < nbSpot; x++) {
@@ -161,7 +163,7 @@ public class Grid {
                     }
                     break;
                 case DOWN:
-                    if (column + nbSpot <= 9) {
+                    if (column + nbSpot <= this.nbColumns) {
                         isPossibleBoatPlacement = true;
 
                         for (int y = 0; y < nbSpot; y++) {
@@ -187,13 +189,13 @@ public class Grid {
     public String toString () {
         String result = "";
         result += "   ";
-        for (int coordRow = 0; coordRow < 10; coordRow++){
+        for (int coordRow = 0; coordRow < this.nbRows; coordRow++){
             result += Constants.REVERSE_MAPPING.get(coordRow) + " ";
         }
         result += "\n";
-        for (int row = 0; row < 10; row++) {
+        for (int row = 0; row < this.nbRows; row++) {
             result += row + " |";
-            for (int col = 0; col < 10; col++) {
+            for (int col = 0; col < this.nbColumns; col++) {
                 result += gridSpots[row][col] + "|";
             }
             result += "\n";
@@ -204,13 +206,13 @@ public class Grid {
     public String displayPlayerTouchedGrid () {
         String result = "";
         result += "   ";
-        for (int coordRow = 0; coordRow < 10; coordRow++){
+        for (int coordRow = 0; coordRow < this.nbRows; coordRow++){
             result += Constants.REVERSE_MAPPING.get(coordRow) + " ";
         }
         result += "\n";
-        for (int row = 0; row < 10; row++) {
+        for (int row = 0; row < this.nbRows; row++) {
             result += row + " |";
-            for (int col = 0; col < 10; col++) {
+            for (int col = 0; col < this.nbColumns; col++) {
                 if (gridSpots[row][col].isTouched()) {
                     if (gridSpots[row][col] instanceof BoatSpot) {
                         result += "O|";
@@ -229,15 +231,15 @@ public class Grid {
     public String displayTouchedSpot(){
         String result = "";
         result += "   ";
-        for (int coordRow = 0; coordRow < 10; coordRow++)
+        for (int coordRow = 0; coordRow < this.nbRows; coordRow++)
         {
             result += Constants.REVERSE_MAPPING.get(coordRow) + " ";
         }
         result += "\n";
-        for (int row = 0; row < 10; row++)
+        for (int row = 0; row < this.nbRows; row++)
         {
             result += row + " |";
-            for (int col = 0; col < 10; col++)
+            for (int col = 0; col < this.nbColumns; col++)
             {
                 if (!gridSpots[row][col].isTouched())
                 {
