@@ -17,5 +17,9 @@ public abstract class Spot {
         return null;
     }
 
+    public String toString () {
+        return "";
+    }
+
 
 }

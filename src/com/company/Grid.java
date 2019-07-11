@@ -262,4 +262,20 @@ public class Grid {
         }
         return result;
     }
+
+    public int getNbRows() {
+        return nbRows;
+    }
+
+    public void setNbRows(int nbRows) {
+        this.nbRows = nbRows;
+    }
+
+    public int getNbColumns() {
+        return nbColumns;
+    }
+
+    public void setNbColumns(int nbColumns) {
+        this.nbColumns = nbColumns;
+    }
 }
