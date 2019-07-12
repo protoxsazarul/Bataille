@@ -9,7 +9,8 @@ public class Computer extends Player {
     private Grid adverseGrid;
     private List<Direction>directions = new ArrayList<>();
     private int directionIndex = 0;
-    private int[]spotTouchedPlayedCoords = null;
+    private int[] firstSpotTouchedPlayedCoords = null;
+    private int[] lastSpotTouchedPlayedCoords = null;
 
     public Computer(Grid adverseGrid){
         this.setName("CPU");
@@ -20,14 +21,20 @@ public class Computer extends Player {
     }
 
     public String getChoice() {
-        boolean isSmartToPlay = this.isSmartToPlay(this.spotIfIsBoatSpotTouched());
+        boolean isSmartToPlay = false;
+            if (firstSpotTouchedPlayedCoords == null) {
+                isSmartToPlay = this.isSmartToPlay(this.spotIfIsBoatSpotTouched());
+            }
+
 
         if (isSmartToPlay) {
             return this.smartChoice();
-        } else if (this.spotTouchedPlayedCoords != null) {
-            this.directionIndex++;
-            return this.smartChoice();
         } else {
+            if (this.firstSpotTouchedPlayedCoords != null) {
+                this.directionIndex++;
+                System.out.println("this.directionIndex à vérif : " + this.directionIndex);
+                return this.smartChoice();
+            }
             return this.randomChoice();
         }
     }
@@ -46,16 +53,30 @@ public class Computer extends Player {
     }
 
     private String smartChoice() {
-            if (this.directionIndex > 3) {
+            if (this.directionIndex > 3) { // à tester si on enlève la condition
                 return this.randomChoice();
             } else {
-                System.out.println("row : " + this.spotTouchedPlayedCoords[0] + " col : " + this.spotTouchedPlayedCoords[1]);
-                /*switch (this.directions.get(this.directionIndex)) {
+                System.out.println("last coord shot : " + Constants.REVERSE_MAPPING.get(this.lastSpotTouchedPlayedCoords[0]) + this.lastSpotTouchedPlayedCoords[1]);
+                int row = this.lastSpotTouchedPlayedCoords[1];
+                int col = this.lastSpotTouchedPlayedCoords[0];
+                switch (this.directions.get(this.directionIndex)) {
                     case LEFT:
+                        col--;
                         break;
-                }*/
-                String coordLetter = Constants.REVERSE_MAPPING.get(this.spotTouchedPlayedCoords[1]);
-                String coord = coordLetter + this.spotTouchedPlayedCoords[0];
+                    case RIGHT:
+                        col++;
+                        break;
+                    case UP:
+                        row--;
+                        break;
+                    case DOWN:
+                        row++;
+                        break;
+                }
+                this.lastSpotTouchedPlayedCoords = new int[]{row, col};
+                String coordLetter = Constants.REVERSE_MAPPING.get(col);
+                String coord = coordLetter + row;
+                System.out.println(coord);
                 return coord;
             }
     }
@@ -69,7 +90,10 @@ public class Computer extends Player {
                 spotPlayed = adverseGridSpots[row][col];
                 if (spotPlayed.isTouched() && spotPlayed instanceof BoatSpot) {
                     if (this.directionIndex == 0) {
-                        this.spotTouchedPlayedCoords = new int[]{col+1, row+1};
+                        this.firstSpotTouchedPlayedCoords = new int[]{col, row};
+                        if (this.lastSpotTouchedPlayedCoords == null) {
+                            this.lastSpotTouchedPlayedCoords = this.firstSpotTouchedPlayedCoords;
+                        }
                     }
                     return spotPlayed;
                 }
@@ -82,7 +106,8 @@ public class Computer extends Player {
         if (spot == null) {
             return false;
         } else if (((BoatSpot) spot).getBoat().isSinked()) {
-            this.spotTouchedPlayedCoords = null;
+            this.firstSpotTouchedPlayedCoords = null;
+            this.lastSpotTouchedPlayedCoords = null;
             return false;
         } else {
             return true;

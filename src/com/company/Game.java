@@ -64,11 +64,15 @@ public class Game {
         }
         System.out.println(adverseGrid.getPlayer().getName() + " a fini son tour \n");
         System.out.println("==================================================================================\n");
-        String input = "";
-        do {
-            System.out.println("Appuyez sur entrée pour continuer");
-            input = Constants.SCAN.nextLine();
-        } while (!input.equals(""));
+
+        if (currentGrid == grid1) {
+            String input = "";
+            do {
+                System.out.println("Appuyez sur entrée pour continuer");
+                input = Constants.SCAN.nextLine();
+            } while (!input.equals(""));
+        }
+
         System.out.println("\n");
         System.out.println("______________________________________________________ \n");
         System.out.println("Au tour de " + currentGrid.getPlayer().getName());
@@ -80,7 +84,7 @@ public class Game {
         System.out.println("Entre ton nom Ô Grand Maître absolu");
         player1.setName(Constants.SCAN.nextLine());
         grid1.setPlayer(player1);
-        Computer player2 = new Computer(grid2);
+        Computer player2 = new Computer(grid1);
         grid2.setPlayer(player2);
         firstPlayer();
         System.out.println("La bataille commence, voici votre grille");
